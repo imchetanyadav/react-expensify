@@ -14,7 +14,7 @@ class ExpenseForm extends React.Component {
       createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
       calendarFocused: false,
       error: '',
-    }
+    };
   }
   onDescriptionChange = (e) => {
     const description = e.target.value;
@@ -49,7 +49,7 @@ class ExpenseForm extends React.Component {
         amount: parseFloat(this.state.amount, 10) * 100,
         createdAt: this.state.createdAt.valueOf(),
         note: this.state.note,
-      })
+      });
     }
   }
   render() {
